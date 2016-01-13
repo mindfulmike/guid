@@ -1,4 +1,4 @@
-var Guid = require('../guid.js');
+var Guid = require('../index.js');
 var assert = require('assert');
 
 suite('Test Guid generation', function() {
