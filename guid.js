@@ -29,14 +29,14 @@
     // non-windowed contexts.
     var global = typeof window !== 'undefined' ? window : self;
 
-    // Get the `window` object, save the previous splitter global
+    // Get the `window` object, save the previous global
     // and initialize splitter as a global.
     var prev = global[moduleName];
     global[moduleName] = definition();
 
     // Add a noConflict function so splitter can be removed from the
     // global namespace.
-    global.splitter.noConflict = function() {
+    global[moduleName].noConflict = function() {
       global[moduleName] = prev;
       return this;
     };
