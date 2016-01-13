@@ -30,7 +30,7 @@
     var global = typeof window !== 'undefined' ? window : self;
 
     // Get the `window` object, save the previous global
-    // and initialize splitter as a global.
+    // and initialize as a global.
     var prev = global[moduleName];
     global[moduleName] = definition();
 
