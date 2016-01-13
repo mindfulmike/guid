@@ -34,7 +34,7 @@
     var prev = global[moduleName];
     global[moduleName] = definition();
 
-    // Add a noConflict function so splitter can be removed from the
+    // Add a noConflict function so can be removed from the
     // global namespace.
     global[moduleName].noConflict = function() {
       global[moduleName] = prev;
